@@ -1,0 +1,13 @@
+/Temp/
+/Library/
+*.csproj
+*.userprefs
+*.sln
+*.unityproj
+*.DS_Store
+/obj
+*.pidb
+AssetBundles
+build_info.txt
+build_info.txt.meta
+.DataConf.xml.swp
