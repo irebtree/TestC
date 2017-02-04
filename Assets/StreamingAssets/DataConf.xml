@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DataConf Version="1.0">
+	 <!-- 可以缓存到本地的资源包管理 -->
+	<AssetBundleConf>
+		<Bundle Name="materials00.txt" Version="0"/>
+		<Bundle Name="materials01.txt" Version="0"/>
+	</AssetBundleConf>
+	
+	
+	<MachineConf Version="1.0">
+		<!--工厂-->
+		<Factory>
+		<!--车间-->
+			<Workshop Id="0" Name="制造一部">
+				<Group Id="0" Number="1_1" Template="0"/>
+				<Group Id="1" Number="1_2" Template="1"/>
+				<Group Id="2" Number="1_3" Template="1"/>
+				<Group Id="3" Number="1_4" Template="0"/>
+				<Group Id="4" Number="1_5" Template="0"/>
+				<Group Id="5" Number="1_6" Template="1"/>
+				<Group Id="6" Number="1_7" Template="0"/>
+				<Group Id="7" Number="1_8" Template="0"/>
+				<Group Id="8" Number="1_9" Template="1"/>
+			</Workshop>
+			<Workshop Id="1" Name="制造二部">
+				<Group Id="9" Number="2_1" Template="1"/>
+				<Group Id="10" Number="2_2" Template="1"/>
+			</Workshop>
+			<Workshop Id="2" Name="制造三部">
+				<Group Id="11" Number="3_1" Template="1"/>
+				<Group Id="12" Number="3_2" Template="1"/>
+			</Workshop>
+			
+		</Factory>
+		<!--机组组合方式-->
+		<!-- id:id号; name:名称； imgPath：图标路径； number：机组号；  assetBundleName：资源包名； prefabName：预设名； prefabId： 预设Id； type：类型；-->
+		<Templates>
+			<Template Template="0"  Icon="MachineSet00" BundleName="machineset01.txt" PrefabName="MachineSet00" Plus="卷烟机:PROTOS70/辅机:FJGZQ/主机:GDX1" >
+			 <Machines>
+			 	<Machine Type="JYJ" Name="卷烟机" Model="PROTOS70" Icon="PROTOS70" BundleName="machineset01.txt" PrefabName="model">
+			 		<Items>
+				 		<Item Id="0" Type="CV-2015-01" Name="CV-2015-01" Model="CV-2015-01" Icon="CV-2015-01" PrefabName="CV-2015-01"></Item>
+						<Item Id="1" Name="CV-2015-02" Model="CV-2015-02" Icon="CV-2015-02" PrefabName="CV-2015-02"></Item>
+						<Item Id="2" Name="CV-2015-03" Model="CV-2015-03" Icon="CV-2015-03" PrefabName="CV-2015-03"></Item>
+						
+						<Item Id="3" Name="CV-2015-04" Model="CV-2015-04" Icon="" PrefabName=""></Item>
+						<Item Id="4" Name="CV-2015-05" Model="CV-2015-05" Icon="" PrefabName=""></Item>
+						<Item Id="5" Name="CV-2015-06" Model="CV-2015-06" Icon="" PrefabName=""></Item>
+						
+						<Item Id="6" Name="CV-2015-07" Model="CV-2015-07" Icon="" PrefabName=""></Item>
+						<Item Id="7" Name="CV-2015-08" Model="CV-2015-08" Icon="" PrefabName=""></Item>
+						<Item Id="8" Name="CV-2015-09" Model="CV-2015-09" Icon="" PrefabName=""></Item>
+						
+						<Item Id="9" Name="CV-2015-010" Model="CV-2015-010" Icon="" PrefabName=""></Item>
+						<Item Id="10" Name="CV-2015-011" Model="CV-2015-011" Icon="" PrefabName=""></Item>
+						<Item Id="11" Name="CV-2015-012" Model="CV-2015-012" Icon="" PrefabName=""></Item>
+			 		</Items>
+				</Machine>
+				
+				<Machine Type="FJ" Name="辅机" Model="FJGZQ" Icon="FJGZQ" BundleName="FJ_FJGZQ.txt" PrefabName="FJ_FJGZQ">
+					<Items>
+						<Item Id="0" Name="e1" Model="a" Icon="a" PrefabName="a"></Item>
+						<Item Id="1" Name="e2" Model="b" Icon="b" PrefabName="b"></Item>
+						<Item Id="2" Name="e3" Model="c" Icon="c" PrefabName="c"></Item>
+						<Item Id="2" Name="e4" Model="d" Icon="" PrefabName=""></Item>
+					</Items>
+					
+				</Machine>
+				
+				<Machine Type="ZJ" Name="主机" Model="Model01" Icon="Model01" BundleName="Zj_model01.txt" PrefabName="ZJ_Model01">
+					<Items>
+						
+						<Item Id="0" Name="部件1" Model="Model01" Icon="" PrefabName="Model01">
+							<Huds>
+								<Hud Type="Counter" Name="计数器" HUDPrefab="HUD_A" UIItemPrefab="HUDCommonUIItem">
+									<HudPoints>
+										<HudPoint Id="0" Name="aaa">
+											<HudItem Type="ProductionCounter" Name="产品计数" Icon=""></HudItem>
+											<HudItem Type="ConsumptionCounter" Name="消耗计数" Icon=""></HudItem>
+										</HudPoint>
+										<HudPoint Id="1" Name="bbb">
+											<HudItem Type="EliminateCounter" Name="剔除计数" Icon=""></HudItem>
+											<HudItem Type="EliminatePositionCounter" Name="剔除位置" Icon=""></HudItem>
+											<HudItem Type="EliminateReasonCounter" Name="剔除原因" Icon=""></HudItem>
+										</HudPoint>
+									</HudPoints>	
+								</Hud>
+								<Hud Type="Instrument" Name="仪表" HUDPrefab="HUD_A" UIItemPrefab="HUDCommonUIItem" >
+									<HudPoints>
+									  	 <HudPoint Id="0" Name="aaa">
+										  	 <HudItem Type="IntegerInstrument" Name="仪表1" Icon=""></HudItem>
+											 <HudItem Type="IntegerInstrument" Name="仪表2" Icon=""></HudItem>
+									  	 </HudPoint>
+									   	 <HudPoint Id="1" Name="bbb">
+										   <HudItem Type="IO" Name="仪表3" Icon=""></HudItem>
+										   <HudItem Type="IO" Name="仪表4" Icon=""></HudItem>
+									    </HudPoint>
+									</HudPoints>
+																		
+								</Hud>
+																
+		                        <Hud Type="Heater" Name="加热器" HUDPrefab="HUD_A" UIItemPrefab="HUDGaugeUIItem" >
+		                        	<HudPoints>
+		                        		<HudPoint>
+				                        	<HudItem Type="Thermostat" Name="加热器1" Icon=""></HudItem>
+				                            <HudItem Type="Thermostat" Name="加热器2" Icon=""></HudItem>
+				                            <HudItem Type="Thermostat" Name="加热器3" Icon=""></HudItem>
+				                            <HudItem Type="Thermostat" Name="加热器4" Icon=""></HudItem>
+		                        		</HudPoint>
+		                        	</HudPoints>
+									  		                       
+		                        </Hud>
+		                        <Hud Type="Selector" Name="选择器" HUDPrefab="HUD_A" UIItemPrefab="HUDSwitchUIItem" >
+		                        	<HudPoints>
+		                        		<HudPoint>
+				                        	<HudItem Type="IO" Name="选择器1" Icon=""></HudItem>
+				                            <HudItem Type="IO" Name="选择器2" Icon=""></HudItem>
+				                            <HudItem Type="IO" Name="选择器3" Icon=""></HudItem>
+				                            <HudItem Type="IO" Name="选择器4" Icon=""></HudItem>
+		                        		</HudPoint>
+		                        	</HudPoints>
+		                            
+		                        </Hud>
+		                        <Hud Type="ParameterSettings" Name="参数设置" HUDPrefab="HUD_A" UIItemPrefab="HUDCommonUIItem" >
+		                        	<HudPoints>
+		                        		<HudPoint>
+		                        			<HudItem Type="GeneralParametersSetting" Name="通用参数设置" Icon=""></HudItem>
+				                            <HudItem Type="MotorParametersSetting" Name="电机参数" Icon=""></HudItem>
+				                            <HudItem Type="CacheSetting" Name="缓存器" Icon=""></HudItem>
+				                            <HudItem Type="HeaterSetting" Name="加热器" Icon=""></HudItem>
+				                            <HudItem Type="GlueSetting" Name="胶水设置" Icon=""></HudItem>
+				                            <HudItem Type="TimeParametersSetting" Name="时间参数" Icon=""></HudItem>
+				                            <HudItem Type="PhaseParametersSetting" Name="相位参数" Icon=""></HudItem>
+				                            <HudItem Type="InjectingParametersSetting" Name="注胶参数" Icon=""></HudItem>
+		                        		</HudPoint>
+		                        	</HudPoints>
+		                            
+		                        </Hud>
+		                        <Hud Type="Glupoints" Name="胶水点" HUDPrefab="HUD_A" UIItemPrefab="HUDCommonUIItem" >
+		                        	<HudPoints>
+		                        		<HudPoint>
+				                        	<HudItem Type="Thermostat" Name="N信息" Icon=""></HudItem>
+				                            <HudItem Type="Thermostat" Name="A信息" Icon=""></HudItem>
+				                            <HudItem Type="Thermostat" Name="L信息" Icon=""></HudItem>
+		                        		</HudPoint>
+		                        	</HudPoints>
+		                            
+		                        </Hud>
+		                        <Hud Type="IO" Name="IO" HUDPrefab="HUD_A" UIItemPrefab="HUDSwitchUIItem" >
+		                        	<HudPoints>
+		                        		<HudPoint>
+		                        			 <HudItem Type="Thermostat" Name="恒温器" Icon=""></HudItem>
+		                            		<HudItem Type="Thermostat" Name="恒温器" Icon=""></HudItem>
+		                            		<HudItem Type="Thermostat" Name="恒温器" Icon=""></HudItem>
+		                           			 <HudItem Type="Thermostat" Name="恒温器" Icon=""></HudItem>
+		                        		</HudPoint>
+		                        	</HudPoints>
+		                           
+		                        </Hud>
+								
+							</Huds>
+						</Item>
+						
+						<Item Id="1" Name="部件2" Model="Model02" Icon="" PrefabName="Model02"></Item>
+						<Item Id="2" Name="部件3" Model="Model03" Icon="" PrefabName="Model03"></Item>
+						<Item Id="3" Name="部件4" Model="Model04" Icon="" PrefabName="Model04"></Item>
+						<Item Id="4" Name="部件5" Model="Model05" Icon="" PrefabName="Model05"></Item>
+						<Item Id="5" Name="部件6" Model="Model06" Icon="" PrefabName="Model06"></Item>
+						<Item Id="6" Name="部件7" Model="Model07" Icon="" PrefabName="Model07"></Item>
+						<Item Id="7" Name="部件8" Model="Model08" Icon="" PrefabName="Model08"></Item>
+						<Item Id="8" Name="部件9" Model="Model09" Icon="" PrefabName="Model09"></Item>
+						
+					</Items>
+					
+					
+				</Machine>
+				
+				<Machine Type="LZZZQ" Name="铝纸装载器" Model="M1" Icon="M1" BundleName="LZZZQ_M1.txt" PrefabName="M1">
+					<Items>
+						<Item Id="0" Name="e1" Model="a" Icon="a" PrefabName="a"></Item>
+						<Item Id="1" Name="e2" Model="b" Icon="b" PrefabName="b"></Item>
+						<Item Id="2" Name="e3" Model="c" Icon="c" PrefabName="c"></Item>
+					</Items>
+					
+				</Machine>
+				
+				<Machine  Type="TMZTSQ" Name="透明纸提升器" Model="M1" Icon="M1" BundleName="TMZTSQ_M1.txt" PrefabName="M1">
+					<Items>
+						<Item Id="0" Name="e1" Model="a" Icon="a" PrefabName="a"></Item>
+						<Item Id="1" Name="e2" Model="b" Icon="b" PrefabName="b"></Item>
+						<Item Id="2" Name="e3" Model="c" Icon="c" PrefabName="c"></Item>
+					</Items>
+					
+				</Machine>
+				
+				<Machine  Type="TMZZZQ" Name="透明纸装载器" Model="M1" Icon="M1" BundleName="TMZZZQ_M1.txt" PrefabName="M1">
+					<Items>
+						<Item Id="0" Name="e1" Model="a" Icon="a" PrefabName="a"></Item>
+						<Item Id="1" Name="e2" Model="b" Icon="b" PrefabName="b"></Item>
+						<Item Id="2" Name="e3" Model="c" Icon="c" PrefabName="c"></Item>
+					</Items>
+					
+				</Machine>
+				
+				<Machine Type="TBJDG" Name="透包机电柜" Model="M1" Icon="M1" BundleName="TBJDG_M1.txt" PrefabName="M1">
+					<Items>
+						<Item Id="0" Name="e1" Model="a" Icon="a" PrefabName="a"></Item>
+						<Item Id="1" Name="e2" Model="b" Icon="b" PrefabName="b"></Item>
+						<Item Id="2" Name="e3" Model="c" Icon="c" PrefabName="c"></Item>
+					</Items>
+					
+				</Machine>
+				
+			 </Machines>	
+			</Template>	
+		</Templates>
+	
+	</MachineConf>
+	
+	
+</DataConf>
+

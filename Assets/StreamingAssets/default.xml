@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<config>
+ <rules>
+  <rule name="namea">
+   <params name="111" >
+    <item name="p" type="get" pattern="(ios|android|)" />
+    <item name="cid" type="get" pattern="(ios|android|)" />
+    <item name="type" type="get" pattern="(ios|android|)" />
+    <item name="sort" type="get" pattern="(ios|android|)" />
+    <item name="action" type="post" pattern="(ios|android|)" />
+   
+   </params>
+  </rule>
+  
+  <rule name="nameb">
+   <params name="222">
+    <item name="p" type="get" pattern="(ios|android|)" />
+    <item name="cid" type="get" pattern="(ios|android|)" />
+    <item name="type" type="get" pattern="(ios|android|)" />
+    <item name="sort" type="get" pattern="(ios|android|)" />
+    <item name="action" type="post" pattern="(ios|android|)" />
+    <item name="userAgent" type="header" pattern="(ios|android|)" />
+   </params>
+  </rule>
+  
+  
+ </rules>
+</config>

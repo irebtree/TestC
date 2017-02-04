@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu>
+  <items>
+    <item menuId="m_sb" isChecked="false" />
+    <item menuId="m_sc" isChecked="false" />
+    <item menuId="i_sc" isChecked="false" />
+  </items>
+</menu>
